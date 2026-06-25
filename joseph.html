@@ -1,0 +1,67 @@
+<html>
+  <head>
+    <title>grid</title>
+    <style>
+      .parent {
+        width: 600px;
+        height: 400px;
+        padding: 50px;
+        gap: 10px;
+        background-color: black;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+      }
+
+      .child1 {
+        background-color: blue;
+        grid-row: span 3;
+      }
+
+      .child2 {
+        background-color: blue;
+        grid-column: span 2;
+      }
+
+      .child3 {
+        background-color: green;
+      }
+
+      .child4 {
+        background-color: pink;
+      }
+
+      .child5 {
+        background-color: aqua;
+      }
+
+      .child6 {
+        background-color: blue;
+        grid-row: span 2;
+      }
+
+      .child7 {
+        background-color: aqua;
+      }
+
+      .child8 {
+        background-color: pink;
+      }
+    </style>
+  </head>
+
+  <body>
+    <center>
+      <div class="parent">
+        <div class="child1"></div>
+        <div class="child2"></div>
+        <div class="child3"></div>
+        <div class="child4"></div>
+        <div class="child5"></div>
+        <div class="child6"></div>
+        <div class="child7"></div>
+        <div class="child8"></div>
+      </div>
+    </center>
+  </body>
+</html>
