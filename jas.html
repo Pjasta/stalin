@@ -1,11 +1,154 @@
 <html>
+  <head>
+    <title>Box</title>
 
-<head>
-    <title> stalin1</title>
-</head>
+    <style>
+      * {
+        padding: 0;
+        box-sizing: border-box;
+      }
 
-<body>
-    <h1>thihsjykukl.uv.l</h1>
-</body>
+      body {
+        background: white;
+      }
 
+      .parent {
+        height: 120px;
+        background: blue;
+      }
+
+      .parent2 {
+        background: green;
+        padding: 40px 20px;
+        display: flex;
+        justify-content: center;
+      }
+
+      .box {
+        width: 180px;
+        height: 220px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .box1 {
+        background: yellow;
+      }
+
+      .box1 .inner {
+        width: 140px;
+        height: 140px;
+        border: 10px solid brown;
+      }
+
+      .box1 .top,
+      .box1 .bottom {
+        height: 50%;
+      }
+
+      .box1 .top {
+        border-bottom: 10px solid brown;
+      }
+
+      .box2 {
+        background: yellow;
+      }
+
+      .box2 .inner {
+        width: 140px;
+        height: 140px;
+        background: purple;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+        padding: 10px;
+      }
+
+      .box2 .cell {
+        background: cyan;
+        border: 2px solid black;
+      }
+
+      .box3 {
+        background: yellow;
+      }
+
+      .box3 .inner {
+        width: 140px;
+        height: 140px;
+        border: 8px solid brown;
+        display: flex;
+      }
+
+      .box3 .col {
+        flex: 1;
+        border-right: 8px solid brown;
+      }
+
+      .box3 .col:last-child {
+        border-right: none;
+      }
+
+      .box4 {
+        background: pink;
+      }
+
+      .box4 .inner {
+        width: 140px;
+        height: 140px;
+        border: 2px solid black;
+        display: flex;
+      }
+
+      .box4 .left {
+        flex: 1;
+        background: #f5b5b5;
+        border-right: 2px solid black;
+      }
+
+      .box4 .right {
+        flex: 1;
+        background: gold;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="parent"></div>
+
+    <div class="parent2">
+      <div class="box box1">
+        <div class="inner">
+          <div class="top"></div>
+          <div class="bottom"></div>
+        </div>
+      </div>
+
+      <div class="box box2">
+        <div class="inner">
+          <div class="cell"></div>
+          <div class="cell"></div>
+          <div class="cell"></div>
+          <div class="cell"></div>
+          <div class="cell"></div>
+          <div class="cell"></div>
+        </div>
+      </div>
+
+      <div class="box box3">
+        <div class="inner">
+          <div class="col"></div>
+          <div class="col"></div>
+          <div class="col"></div>
+        </div>
+      </div>
+
+      <div class="box box4">
+        <div class="inner">
+          <div class="left"></div>
+          <div class="right"></div>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>
